@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Alta de nuevas piezas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="content">
+        <h2>Alta de nueva pieza</h2>
+        <a name="alta"></a>
+        <p>Usa este formulario para dar de alta una nueva pieza en el inventario.</p>
+        <form>
+            <label for="codigo_pieza">Código de la pieza</label>
+            <input type="text" id="codigo_pieza" name="codigo_pieza">
+
+            <label for="nombre_pieza">Nombre de la pieza</label>
+            <input type="text" id="nombre_pieza" name="nombre_pieza">
+
+            <label for="cantidad_inicial">Cantidad inicial</label>
+            <input type="number" id="cantidad_inicial" name="cantidad_inicial" min="0">
+
+            <button type="submit">Agregar pieza</button>
+        </form>
+    </div>
+</body>
+
+</html>

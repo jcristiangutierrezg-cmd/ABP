@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de movimientos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="content">
+        <h2>Registro de entrada/salida de pieza</h2>
+        <a name="movimientos"></a>
+        <p>Usa este formulario cada vez que una pieza salga o entre al inventario.</p>
+        <form>
+            <label for="tipo_movimiento">¿Es entrada o salida?</label>
+            <select id="tipo_movimiento" name="tipo_movimiento">
+                <option value="entrada">Entrada</option>
+                <option value="salida">Salida</option>
+            </select>
+
+            <label for="codigo_Pieza">Código de la pieza</label>
+            <input type="text" id="codigo_Pieza" name="codigo_Pieza">
+
+            <label for="nombre_Pieza">Nombre de la pieza</label>
+            <input type="text" id="nombre_Pieza" name="nombre_Pieza">
+
+            <label for="cantidad">Cantidad</label>
+            <input type="number" id="cantidad" name="cantidad" min="1">
+
+            <label for="fecha">Fecha</label>
+            <input type="date" id="fecha" name="fecha">
+
+            <button type="submit">Guardar registro</button>
+        </form>
+    </div>
+</body>
+
+</html>

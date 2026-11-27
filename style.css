@@ -1,0 +1,281 @@
+:root {
+    --bg: #ffffff;
+    --bg-soft: #f4f4f2;
+    --text: #1c1c1c;
+    --muted: #6a6a6a;
+    --border: #e2e2de;
+    --accent: #e8590c;
+    --accent-dark: #c94a08;
+    --ok-bg: #e6f4ea;
+    --ok-text: #1e6b34;
+    --radius: 6px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    padding: 2rem;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--accent-dark);
+    text-decoration: underline;
+}
+
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+h1 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: 1.5rem;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    color: var(--muted);
+    margin-bottom: 1rem;
+}
+
+
+/* Marco superior */
+
+body.page-arriba {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding: 0 2rem;
+    background: #c94a08;
+    color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+body.page-arriba h1 span {
+    color: #fff;
+}
+
+
+/* Menú lateral */
+
+body.page-menu {
+    background: var(--bg-soft);
+    border-right: 1px solid var(--border);
+    padding: 1.5rem 1rem;
+    min-height: 100vh;
+}
+
+body.page-menu h2 {
+    font-size: 0.95rem;
+    color: var(--muted);
+    font-weight: 600;
+    margin: 0 0 1rem 0.75rem;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.menu a {
+    display: block;
+    padding: 0.6rem 0.75rem;
+    color: var(--text);
+    border-radius: var(--radius);
+    border-left: 3px solid transparent;
+    transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.menu a:hover {
+    background: var(--bg);
+    border-left-color: var(--accent);
+    text-decoration: none;
+    color: var(--text);
+}
+
+
+/* Bienvenida */
+
+body.page-central {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+body.page-central p {
+    font-size: 1.25rem;
+    color: var(--text);
+    margin: 0;
+}
+
+
+/* Acceso */
+
+body.page-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: var(--bg-soft);
+}
+
+.login-box {
+    width: 100%;
+    max-width: 380px;
+    padding: 2rem;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.login-box h1 {
+    margin-bottom: 0.25rem;
+}
+
+.login-box h2 {
+    font-size: 1.05rem;
+    color: var(--muted);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+
+/* Contenido */
+
+.content {
+    max-width: 720px;
+}
+
+
+/* Formularios */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-top: 1rem;
+}
+
+label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 0.75rem;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 0.65rem 0.85rem;
+    font: inherit;
+    color: var(--text);
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(232, 89, 12, 0.15);
+}
+
+
+/* Botones */
+
+button,
+input[type="submit"],
+.btn {
+    display: inline-block;
+    align-self: flex-start;
+    margin-top: 1.25rem;
+    padding: 0.65rem 1.5rem;
+    font: inherit;
+    font-weight: 600;
+    color: #fff;
+    background: var(--accent);
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.15s ease;
+}
+
+button:hover,
+input[type="submit"]:hover,
+.btn:hover {
+    background: var(--accent-dark);
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* Tablas */
+
+.table-wrap {
+    overflow-x: auto;
+    margin-top: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+th {
+    text-align: left;
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+    background: var(--bg-soft);
+    border-bottom: 2px solid var(--border);
+}
+
+td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+tr:hover td {
+    background: #fafaf8;
+}
+
+
+/* Estatus */
+
+.badge {
+    display: inline-block;
+    padding: 0.15rem 0.6rem;
+    font-size: 0.85rem;
+    border-radius: 999px;
+    background: var(--ok-bg);
+    color: var(--ok-text);
+}
